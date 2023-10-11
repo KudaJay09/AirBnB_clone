@@ -30,7 +30,6 @@ class FileStorage:
         FileStorage.__objects["{}.{}".format(ocname, obj.id)] = obj
 
     def save(self):
-<<<<<<< HEAD
             """Serializes __objects to the JSON file __file_path"""
             odict = FileStorage.__objects
             objdict = {obj: odict[obj].to_dict() for obj in odict.keys()}
@@ -48,7 +47,3 @@ class FileStorage:
                     self.new(eval(cls_name)(**o))
             except FileNotFoundError:
                 return
-=======
-        """Serializes __objects to the JSON file __file_path"""
-        pass
->>>>>>> 2a2425b43554bfac0bf4ba57261ca731e0dd20b5
