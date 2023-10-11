@@ -14,7 +14,7 @@ class FileStorage:
 
     Attributes:
         __file_path (str): Name of the file to save objects.
-    
+
         __objects (dict): A dictionary of an abstruct objects
     """
     __file_path = "file.json"
@@ -23,13 +23,14 @@ class FileStorage:
     def all(self):
         """Returns the dictionary __objects"""
         return FileStorage.__objects
-    
+
     def new(self, obj):
         """Sets __objects the obj with key <obj class name>.id"""
         ocname = obj.__class__.__name__
         FileStorage.__objects["{}.{}".format(ocname, obj.id)] = obj
 
     def save(self):
+<<<<<<< HEAD
             """Serializes __objects to the JSON file __file_path"""
             odict = FileStorage.__objects
             objdict = {obj: odict[obj].to_dict() for obj in odict.keys()}
@@ -47,3 +48,7 @@ class FileStorage:
                     self.new(eval(cls_name)(**o))
             except FileNotFoundError:
                 return
+=======
+        """Serializes __objects to the JSON file __file_path"""
+        pass
+>>>>>>> 2a2425b43554bfac0bf4ba57261ca731e0dd20b5
