@@ -113,3 +113,11 @@ class TestBaseModel(unittest.TestCase):
         base_dict = self.base_model.to_dict()
         new_base_model = BaseModel(**base_dict)
         self.assertTrue(new_base_model is not self.base_model)
+
+    def test_save_updates_the_expected_fields(self):
+        """
+        Checking updates updated_at with current datetime
+        """
+        old_updated_at = self.base_model.updated_at
+        self.base_model.save()
+        self.assertNotEqual(self.base_model.updated_at, old_updated_at)
