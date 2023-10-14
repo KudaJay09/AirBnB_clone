@@ -8,6 +8,7 @@ from datetime import datetime
 from time import sleep
 from models.city import City
 
+
 class TestCity_instantiation(unittest.TestCase):
     """Unittest for testing City class"""
 
