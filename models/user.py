@@ -5,7 +5,7 @@ from models.base_model import BaseModel
 
 class User(BaseModel):
     """Represents a User class.
-    
+
     Attrib:
         email (str): The email of the user.
         password (str): Password of the user.
@@ -14,6 +14,6 @@ class User(BaseModel):
     """
 
     email = ""
-    password =""
+    password = ""
     first_name = ""
     last_name = ""

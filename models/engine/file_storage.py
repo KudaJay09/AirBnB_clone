@@ -41,6 +41,7 @@ class FileStorage:
                 from models.amenity import Amenity
                 from models.state import State
                 from models.user import User
+                from models.review import Review
 
                 for o in objdict.values():
                     cls_name = o["__class__"]
