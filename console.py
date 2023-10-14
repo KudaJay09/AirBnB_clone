@@ -151,6 +151,7 @@ class HBNBCommand(cmd.Cmd):
         or updating attribute, saving the change into the JSON file
         """
         line = line.split()
+        line = [x for x in line if x]
         if not line:
             print("** class name missing **")
             return
@@ -177,9 +178,20 @@ class HBNBCommand(cmd.Cmd):
 
         elif len(line) == 4:
             object_to_update = store_dict[dict_key]
-            setattr(object_to_update, line[2], eval(line[3]))
+            setattr(object_to_update, eval(line[2]), eval(line[3]))
             storage.all()[dict_key] = object_to_update
             storage.save()
+
+        elif len(line) > 4:
+            if (line[2].startswith("{")):
+                object_to_update = store_dict[dict_key]
+                line[2] = line[2].strip("{")
+                line[-1] = line[-1].strip("}")
+                for i in range(2, len(line), 2):
+                    setattr(object_to_update, eval(line[i].strip(":")),
+                            eval(line[i+1]))
+                storage.all()[dict_key] = object_to_update
+                storage.save()
 
     def do_count(self, line):
         """Retrieves the number of instances of a class
