@@ -4,6 +4,12 @@ This module is the command line interpreter for the clone project
 """
 import cmd
 from models.base_model import BaseModel
+from models.amenity import Amenity
+from models.review import Review
+from models.place import Place
+from models.state import State
+from models.city import City
+from models.user import User
 from models import storage
 
 
@@ -12,7 +18,8 @@ class HBNBCommand(cmd.Cmd):
     This class contains the entry point for the command line interpreter
     """
     prompt = "(hbnb) "
-    classes = {"BaseModel": BaseModel}
+    classes = {"BaseModel": BaseModel, "User": User, "Amenity": Amenity,
+               "Review": Review, "Place": Place, "State": State, "City": City}
 
     def do_EOF(self, line):
         """Exits the command line interpreter"""
@@ -28,6 +35,7 @@ class HBNBCommand(cmd.Cmd):
         """Executes when an emptyline + ENTER is an input"""
         pass
 
+    # ---Commands for the Console ---
     def do_create(self, line):
         """Creates a new instance of BaseModel, saves it to JSON file and
         prints the id"""
