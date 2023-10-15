@@ -95,7 +95,7 @@ $
  - [ ] Task 105
  - [ ] Task 106
 
-## Resources
+## Resources :books:
 > - [cmd module](https://docs.python.org/3.8/library/cmd.html)
 > - [cmd module in depth](http://pymotw.com/2/cmd/)
 > - packages
