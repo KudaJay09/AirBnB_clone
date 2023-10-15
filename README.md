@@ -139,9 +139,10 @@ $
 &emsp;File(s):
 - &emsp;&emsp;&emsp;[file]() - file description
 
-## Authors :Pen:
+## Authors :black_nib:
 
 <h3 align="left">Connect with me:</h3>
+
 ## Jesufemi Omitogun
 
 <p align="left">
