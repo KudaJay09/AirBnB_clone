@@ -78,7 +78,8 @@ class HBNBCommand(cmd.Cmd):
             print(inst.id)
 
     def do_show(self, line):
-        """Prints the string rep of an instance based on the class
+        """
+        Prints the string rep of an instance based on the class
         """
         line = line.split()
         if not line:
@@ -178,7 +179,11 @@ class HBNBCommand(cmd.Cmd):
 
         elif len(line) == 4:
             object_to_update = store_dict[dict_key]
-            setattr(object_to_update, line[2], eval(line[3]))
+            if line[2].startswith("{"):
+                setattr(object_to_update, eval(line[2].strip("{").strip(":")),
+                        eval(line[3].strip("}")))
+            else:
+                setattr(object_to_update, line[2], eval(line[3]))
             storage.all()[dict_key] = object_to_update
             storage.save()
 
@@ -189,7 +194,8 @@ class HBNBCommand(cmd.Cmd):
                 line[-1] = line[-1].strip("}")
                 print(line)
                 for i in range(2, len(line), 2):
-                    setattr(object_to_update, eval(line[i].strip(":")),
+                    setattr(object_to_update,
+                            eval(line[i].strip(":")),
                             eval(line[i+1].replace(",", "")))
                 storage.all()[dict_key] = object_to_update
                 storage.save()

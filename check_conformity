@@ -1,0 +1,36 @@
+#!/bin/bash
+pycodestyle *.py
+pycodestyle models/*.py
+pycodestyle models/engine/*.py
+pycodestyle tests/*.py
+pycodestyle tests/test_models/*.py
+
+echo "** Testing For Documentation of BaseModel class **"
+python3 -c 'print(__import__("models").base_model.__doc__)'
+python3 -c 'print(__import__("models").base_model.BaseModel.__doc__)'
+python3 -c 'print(__import__("models").base_model.BaseModel.save.__doc__)'
+python3 -c 'print(__import__("models").base_model.BaseModel.to_dict.__doc__)'
+
+echo "** Testing For Documentation of User class **"
+python3 -c 'print(__import__("models").user.__doc__)'
+python3 -c 'print(__import__("models").user.User.__doc__)'
+
+echo "** Testing For Documentation of Place class **"
+python3 -c 'print(__import__("models").place.__doc__)'
+python3 -c 'print(__import__("models").place.Place.__doc__)'
+
+echo "** Testing For Documentation of City class **"
+python3 -c 'print(__import__("models").city.__doc__)'
+python3 -c 'print(__import__("models").city.City.__doc__)'
+
+echo "** Testing For Documentation of State class **"
+python3 -c 'print(__import__("models").state.__doc__)'
+python3 -c 'print(__import__("models").state.State.__doc__)'
+
+echo "** Testing For Documentation of Amenity class **"
+python3 -c 'print(__import__("models").amenity.__doc__)'
+python3 -c 'print(__import__("models").amenity.Amenity.__doc__)'
+
+echo "** Testing For Documentation of Review class **"
+python3 -c 'print(__import__("models").review.__doc__)'
+python3 -c 'print(__import__("models").review.Review.__doc__)'
