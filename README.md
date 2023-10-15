@@ -139,7 +139,16 @@ $
 &emsp;File(s):
 - &emsp;&emsp;&emsp;[file]() - file description
 
-## Authors
+## Authors :Pen:
+
+<h3 align="left">Connect with me:</h3>
+Jesufemi Omitogun
+<p align="left">
+<a href="https://twitter.com/omixcreative" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="omixcreative" height="30" width="40" /></a>
+<a href="https://linkedin.com/in/jesufemi omitogun" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="jesufemi omitogun" height="30" width="40" /></a>
+</p>
+
+
 - Github - [omitogunjesufemi](https://github.com/omitogunjesufemi)
 - Twitter - [@omixcreative](https://twitter.com/omixcreative)
 - Linkedin - [@omitogunjesufemi](https://www.linkedin.com/in/omitogunjesufemi)
