@@ -11,7 +11,7 @@ A command interpreter to manage your AirBnB objects.
  - [Advanced Tasks](#advanced-tasks)
 - [Author](#author)
 
-## Project Description
+## Project Description :speech_ballon:
 This project is regarded as the first step towards building a full web applications to which other following projects: HTML/CSS templating, database storage, API, front-end integration are added to.
 
 Each task is linked and will help to:
@@ -21,14 +21,14 @@ Each task is linked and will help to:
 - create the first abstracted storage engine of the project: File storage.
 - create all unittests to validate all our classes and storage engine
 
-## Command Interpreter Description
+## Command Interpreter Description :speech_ballon:
 The command interpreter is a simple shell with a specific use-case; which is to manage the objects of our project:
 - Create a new object (ex: a new User or a new Place)
 - Retrieve an object from a file, a database etc…
 - Do operations on objects (count, compute stats, etc…)
 - Update attributes of an object
 - Destroy an object
-### How to start it
+### How to start it :running:
 The command interpreter can be started with:
 `./console.py`
 ### How to use it
@@ -71,7 +71,7 @@ EOF  help  quit
 (hbnb)
 $
 ```
-### Examples
+### Examples :clipboard:
 
 ## Progress
 - [ ] Mandatory Tasks
@@ -150,6 +150,7 @@ $
 <a href="https://linkedin.com/in/jesufemi omitogun" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="jesufemi omitogun" height="30" width="40" /></a>
 </p>
 
+- Github - [omitogunjesufemi](https://github.com/omitogunjesufemi)
 
 ## Kudakwashe Jeranyama
 
@@ -157,3 +158,5 @@ $
 <a href="https://twitter.com/kudajay09" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="kudajay09" height="30" width="40" /></a>
 <a href="https://linkedin.com/in/makeo _lowkey_" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="makeo _lowkey_" height="30" width="40" /></a>
 </p>
+
+- Github - [KudaJay09](https://github.com/KudaJay09)
