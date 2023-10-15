@@ -11,7 +11,7 @@ A command interpreter to manage your AirBnB objects.
  - [Advanced Tasks](#advanced-tasks)
 - [Author](#author)
 
-## Project Description :speech_ballon:
+## Project Description :speech_balloon:
 This project is regarded as the first step towards building a full web applications to which other following projects: HTML/CSS templating, database storage, API, front-end integration are added to.
 
 Each task is linked and will help to:
@@ -21,7 +21,7 @@ Each task is linked and will help to:
 - create the first abstracted storage engine of the project: File storage.
 - create all unittests to validate all our classes and storage engine
 
-## Command Interpreter Description :speech_ballon:
+## Command Interpreter Description :speech_balloon:
 The command interpreter is a simple shell with a specific use-case; which is to manage the objects of our project:
 - Create a new object (ex: a new User or a new Place)
 - Retrieve an object from a file, a database etc…
