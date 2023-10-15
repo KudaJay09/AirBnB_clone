@@ -73,7 +73,7 @@ $
 ```
 ### Examples :clipboard:
 
-## Progress :hourglass_not_done:
+## Progress ⏳⌛
 - [ ] Mandatory Tasks
  - [ ] Task 0
  - [ ] Task 1
