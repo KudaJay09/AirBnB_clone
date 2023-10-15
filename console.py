@@ -27,22 +27,22 @@ class HBNBCommand(cmd.Cmd):
         Becomes: cmd class id
         """
         if line.endswith(")"):
-            line = line.split(".")
-            class_name = line[0]
-            cmd_params = line[1].split("(")
-            cmd = cmd_params[0]
-            all_params = cmd_params[1].strip(")")
-            sep_params = all_params.split(",")
+            line = line.strip(")")
+            line = line.split("(")
+            class_and_cmd = line[0].split(".")
+            class_name = class_and_cmd[0]
+            cmd = class_and_cmd[1]
+            id_and_attrs = ""
 
-            # ---This is to evaluate the id value when inputed as str ---
-            if sep_params[0] != "":
-                params = eval(sep_params[0])
-            else:
-                params = ""
-            for param in sep_params[1:]:
-                params = params + param + " "
+            if len(line) > 1:
+                id_and_attrs = line[1]
+                if "{" in id_and_attrs:
+                    id_and_attrs = id_and_attrs.replace(",", "", 1)
+                else:
+                    id_and_attrs = id_and_attrs.replace(",", "")
 
-            new_line = cmd + " " + class_name + " " + params
+            new_line = cmd + " " + class_name + " " + id_and_attrs
+            new_line = new_line.strip()
             return new_line
 
         return line
@@ -94,7 +94,7 @@ class HBNBCommand(cmd.Cmd):
             return
 
         store_dict = storage.all()
-        dict_key = "{}.{}".format(line[0], line[1])
+        dict_key = "{}.{}".format(line[0], line[1].strip('"'))
 
         if dict_key not in store_dict:
             print("** no instance found **")
@@ -120,7 +120,7 @@ class HBNBCommand(cmd.Cmd):
             return
 
         store_dict = storage.all()
-        dict_key = "{}.{}".format(line[0], line[1])
+        dict_key = "{}.{}".format(line[0], line[1].strip('"'))
         if dict_key not in store_dict:
             print("** no instance found **")
             return
@@ -165,7 +165,7 @@ class HBNBCommand(cmd.Cmd):
             return
 
         store_dict = storage.all()
-        dict_key = "{}.{}".format(line[0], line[1])
+        dict_key = "{}.{}".format(line[0], line[1].strip('"'))
         if dict_key not in store_dict:
             print("** no instance found **")
             return
@@ -178,7 +178,7 @@ class HBNBCommand(cmd.Cmd):
 
         elif len(line) == 4:
             object_to_update = store_dict[dict_key]
-            setattr(object_to_update, eval(line[2]), eval(line[3]))
+            setattr(object_to_update, line[2], eval(line[3]))
             storage.all()[dict_key] = object_to_update
             storage.save()
 
@@ -187,9 +187,10 @@ class HBNBCommand(cmd.Cmd):
                 object_to_update = store_dict[dict_key]
                 line[2] = line[2].strip("{")
                 line[-1] = line[-1].strip("}")
+                print(line)
                 for i in range(2, len(line), 2):
                     setattr(object_to_update, eval(line[i].strip(":")),
-                            eval(line[i+1]))
+                            eval(line[i+1].replace(",", "")))
                 storage.all()[dict_key] = object_to_update
                 storage.save()
 
