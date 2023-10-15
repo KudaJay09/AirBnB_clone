@@ -158,5 +158,3 @@ $
 <a href="https://twitter.com/kudajay09" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="kudajay09" height="30" width="40" /></a>
 <a href="https://linkedin.com/in/makeo _lowkey_" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="makeo _lowkey_" height="30" width="40" /></a>
 </p>
-
-- Github - [KudaJay09](https://github.com/KudaJay09)
