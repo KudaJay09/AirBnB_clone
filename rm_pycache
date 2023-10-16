@@ -1,0 +1,7 @@
+#!/bin/bash
+
+rm -rf models/__pycache__
+rm -rf models/engine/__pycache__
+rm -rf tests/__pycache__
+rm -rf tests/test_models/__pycache__
+rm -rf tests/test_models/test_engine/__pycache__
