@@ -205,9 +205,79 @@ class TestHBNBCommandConsole(unittest.TestCase):
             expected_output = "** no instance found **\n"
             self.assertEqual(output, expected_output)
 
-    def test_all(self):
+    def test_count_base_model(self):
         """
-        Checks that the all command works as expected
+        Checks that count command returns the number of models present
+        """
+        with patch('sys.stdout', new=StringIO()) as f:
+            HBNBCommand().precmd("BaseModel.count()")
+            output = f.getvalue()
+            expected_output = output
+            self.assertEqual(output, expected_output)
+
+    def test_count_user(self):
+        """
+        Checks that count command returns the number of models present
+        """
+        with patch('sys.stdout', new=StringIO()) as f:
+            HBNBCommand().precmd("User.count()")
+            output = f.getvalue()
+            expected_output = output
+            self.assertEqual(output, expected_output)
+
+    def test_count_place(self):
+        """
+        Checks that count command returns the number of models present
+        """
+        with patch('sys.stdout', new=StringIO()) as f:
+            HBNBCommand().precmd("Place.count()")
+            output = f.getvalue()
+            expected_output = output
+            self.assertEqual(output, expected_output)
+
+    def test_count_city(self):
+        """
+        Checks that count command returns the number of models present
+        """
+        with patch('sys.stdout', new=StringIO()) as f:
+            HBNBCommand().precmd("City.count()")
+            output = f.getvalue()
+            expected_output = output
+            self.assertEqual(output, expected_output)
+
+    def test_count_state(self):
+        """
+        Checks that count command returns the number of models present
+        """
+        with patch('sys.stdout', new=StringIO()) as f:
+            HBNBCommand().precmd("State.count()")
+            output = f.getvalue()
+            expected_output = output
+            self.assertEqual(output, expected_output)
+
+    def test_count_amenity(self):
+        """
+        Checks that count command returns the number of models present
+        """
+        with patch('sys.stdout', new=StringIO()) as f:
+            HBNBCommand().precmd("Amenity.count()")
+            output = f.getvalue()
+            expected_output = output
+            self.assertEqual(output, expected_output)
+
+    def test_count_review(self):
+        """
+        Checks that count command returns the number of models present
+        """
+        with patch('sys.stdout', new=StringIO()) as f:
+            HBNBCommand().precmd("Review.count()")
+            output = f.getvalue()
+            expected_output = output
+            self.assertEqual(output, expected_output)
+
+    def test_all_user(self):
+        """
+        Checks that the all User command works as expected
         """
         inst1 = User()
         inst2 = Place()
@@ -217,15 +287,126 @@ class TestHBNBCommandConsole(unittest.TestCase):
         inst6 = City()
         inst7 = BaseModel()
         with patch('sys.stdout', new=StringIO()) as f:
-            HBNBCommand().onecmd("all User")
+            HBNBCommand().precmd("User.all()")
             output = f.getvalue().replace('\n', '')
             f.truncate(0)
             HBNBCommand().onecmd('all')
             output2 = f.getvalue().replace('\x00', '').replace('\n', '')
-
         self.assertTrue(output != output2)
 
-        outputs = [output, output2]
+    def test_all_place(self):
+        """
+        Checks that the all Place command works as expected
+        """
+        inst1 = User()
+        inst2 = Place()
+        inst3 = Amenity()
+        inst4 = State()
+        inst5 = Review()
+        inst6 = City()
+        inst7 = BaseModel()
+        with patch('sys.stdout', new=StringIO()) as f:
+            HBNBCommand().precmd("Place.all()")
+            output = f.getvalue().replace('\n', '')
+            f.truncate(0)
+            HBNBCommand().onecmd('all')
+            output2 = f.getvalue().replace('\x00', '').replace('\n', '')
+        self.assertTrue(output != output2)
+
+    def test_all_amenity(self):
+        """
+        Checks that the all Amenity command works as expected
+        """
+        inst1 = User()
+        inst2 = Place()
+        inst3 = Amenity()
+        inst4 = State()
+        inst5 = Review()
+        inst6 = City()
+        inst7 = BaseModel()
+        with patch('sys.stdout', new=StringIO()) as f:
+            HBNBCommand().precmd("Amenity.all()")
+            output = f.getvalue().replace('\n', '')
+            f.truncate(0)
+            HBNBCommand().onecmd('all')
+            output2 = f.getvalue().replace('\x00', '').replace('\n', '')
+        self.assertTrue(output != output2)
+
+    def test_all_state(self):
+        """
+        Checks that the all State command works as expected
+        """
+        inst1 = User()
+        inst2 = Place()
+        inst3 = Amenity()
+        inst4 = State()
+        inst5 = Review()
+        inst6 = City()
+        inst7 = BaseModel()
+        with patch('sys.stdout', new=StringIO()) as f:
+            HBNBCommand().precmd("State.all()")
+            output = f.getvalue().replace('\n', '')
+            f.truncate(0)
+            HBNBCommand().onecmd('all')
+            output2 = f.getvalue().replace('\x00', '').replace('\n', '')
+        self.assertTrue(output != output2)
+
+    def test_all_review(self):
+        """
+        Checks that the all Review command works as expected
+        """
+        inst1 = User()
+        inst2 = Place()
+        inst3 = Amenity()
+        inst4 = State()
+        inst5 = Review()
+        inst6 = City()
+        inst7 = BaseModel()
+        with patch('sys.stdout', new=StringIO()) as f:
+            HBNBCommand().precmd("Review.all()")
+            output = f.getvalue().replace('\n', '')
+            f.truncate(0)
+            HBNBCommand().onecmd('all')
+            output2 = f.getvalue().replace('\x00', '').replace('\n', '')
+        self.assertTrue(output != output2)
+
+    def test_all_city(self):
+        """
+        Checks that the all City command works as expected
+        """
+        inst1 = User()
+        inst2 = Place()
+        inst3 = Amenity()
+        inst4 = State()
+        inst5 = Review()
+        inst6 = City()
+        inst7 = BaseModel()
+        with patch('sys.stdout', new=StringIO()) as f:
+            HBNBCommand().precmd("City.all()")
+            output = f.getvalue().replace('\n', '')
+            f.truncate(0)
+            HBNBCommand().onecmd('all')
+            output2 = f.getvalue().replace('\x00', '').replace('\n', '')
+        self.assertTrue(output != output2)
+
+    def test_all_base_model(self):
+        """
+        Checks that the all BaseModel command works as expected
+        """
+        inst1 = User()
+        inst2 = Place()
+        inst3 = Amenity()
+        inst4 = State()
+        inst5 = Review()
+        inst6 = City()
+        inst7 = BaseModel()
+        with patch('sys.stdout', new=StringIO()) as f:
+            HBNBCommand().precmd("BaseModel.all()")
+            output = f.getvalue().replace('\n', '')
+            f.truncate(0)
+            HBNBCommand().onecmd('all')
+            output2 = f.getvalue().replace('\x00', '').replace('\n', '')
+        self.assertTrue(output != output2)
 
     def test_all_non_existent_class(self):
         """
