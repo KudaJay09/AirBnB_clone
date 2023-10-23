@@ -1,0 +1,90 @@
+.amenities2{
+    margin-top: 40px;
+    display: flex;
+    width: 100%;
+    /* justify-content: left; */
+    flex-direction: column;
+}
+
+.amenities2 h2{
+    font-size: 16px;
+    border-bottom: 1px solid #DDDDDD;
+    text-align: left;
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+.amenities2 ul li{
+    list-style: none;
+    position: relative;
+    text-align: left;
+    height: 20px;
+    padding-top: 7px;
+    align-items: end;
+}
+
+.tv:before{
+    content: " ";
+    background-image: url(../images/icon_tv.png);
+    width: 24.9px;
+    height: 24px;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+    left: -40px;
+    top: 0px;
+}
+
+.wifi:before{
+    content: " ";
+    background-image: url(../images/icon_wifi.png);
+    width: 24.9px;
+    height: 24px;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+    left: -40px;
+    top: 2.5px;
+}
+
+.pets:before{
+    content: " ";
+    background-image: url(../images/icon_pets.png);
+    width: 24.9px;
+    height: 24px;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+    left: -40px;
+    top: 4.5px;
+}
+
+.reviews{
+    margin-top: 40px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.reviews h2{
+    font-size: 16px;
+    border-bottom: 1px solid #DDDDDD;
+    text-align: left;
+    padding-bottom: 10px;
+}
+
+.reviews ul{
+    list-style: none;
+    flex-direction: column;
+    padding-left: 0%;
+}
+
+.reviews p{
+    /* list-style: none; */
+    text-align: left;
+}
+
+.reviews h3{
+    text-align: left;
+    margin: 0;
+}
