@@ -7,5 +7,6 @@ footer{
     display: grid;
     place-content: center;
     border-top: 1px solid #CCC;
-    
+    position: absolute;
+    display: flex;    
 }

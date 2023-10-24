@@ -1,0 +1,8 @@
+In the 102-filters.css
+
+/* Turns cursor into a pointer when you hover over the amenities */
+.popover:hover,
+.button:hover{
+    cursor: pointer;
+}
+
