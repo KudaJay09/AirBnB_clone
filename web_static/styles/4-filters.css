@@ -21,4 +21,5 @@ button{
 
 button:hover{
     opacity: 90%;
+    cursor: pointer;
 }

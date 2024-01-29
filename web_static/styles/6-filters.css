@@ -17,9 +17,12 @@ ul li{
     display: block;
     border: 1px solid #DDDDDD;
     border-radius: 4px;
+    cursor: pointer;
+
 }
 
-h2{
+.locations h2,
+.amenities h2{
     font-size: 16px;
     padding: 0;
     margin: 0;
